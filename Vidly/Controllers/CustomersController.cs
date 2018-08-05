@@ -19,6 +19,8 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
+
+        
         // GET: Customers
         public virtual ViewResult Index()
         {
