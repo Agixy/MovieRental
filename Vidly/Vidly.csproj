@@ -283,6 +283,10 @@
     <Compile Include="Migrations\201808020826514_AddMovieProp.Designer.cs">
       <DependentUpon>201808020826514_AddMovieProp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808061206138_Migration.cs" />
+    <Compile Include="Migrations\201808061206138_Migration.Designer.cs">
+      <DependentUpon>201808061206138_Migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -302,8 +306,6 @@
     <Content Include="Content\bootstrap-lumen.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -327,10 +329,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -458,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808020826514_AddMovieProp.resx">
       <DependentUpon>201808020826514_AddMovieProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808061206138_Migration.resx">
+      <DependentUpon>201808061206138_Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
