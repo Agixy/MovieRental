@@ -38,28 +38,53 @@ namespace Vidly.Controllers
         }
 
 
-        // GET: Movies
-        public virtual ActionResult Random()
+        public virtual ActionResult New()
         {
-            var movie = new Movie() { Name = "Shrek" };
-            var customers = new List<Customer>
+            var generes = _context.Generes.ToList();
+            var viewModel = new MovieFormViewModel()
             {
-                new Customer{Name = "Customer 1"},
-                new Customer{Name = "Customer 1"},
-
+                Generes = generes
             };
 
-            var viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
-
-
-            return View(viewModel);
+            return View("MovieForm", viewModel);
         }
 
-   
+        [HttpPost]
+        public virtual ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            _context.Movies.Add(movie);
+            else
+            {
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
 
+                movieInDb.Name = movie.Name;
+                movieInDb.NumberInStock = movie.NumberInStock;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.DateAdded = movieInDb.DateAdded;
+
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            var ViewModel = new MovieFormViewModel
+            {
+                Movie = movie,
+                Generes = _context.Generes.ToList()
+            };
+
+            return View("MovieForm", ViewModel);
+        }
     }
 }

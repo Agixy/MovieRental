@@ -2,11 +2,16 @@
 
 @{
 
-      ViewBag.Title = "Movies";
-      Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Movie</h2>
+
+@using (@Html.BeginForm("New", "Movies"))
+{
+    <button type="submit" class="btn btn-primary">NEW MOVIE</button>
+}
 
 @if (!Model.Any())
 {
@@ -25,9 +30,9 @@ else
             @foreach (var movie in Model)
             {
                 <tr>
-                    <td>@Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+                    <td>@Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id }, null)</td>
                     <td>@movie.Genre.Name</td>
-                  
+
                 </tr>
             }
         </tbody>
