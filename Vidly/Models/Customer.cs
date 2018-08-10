@@ -24,6 +24,7 @@ namespace Vidly.Models
         public byte MembershipTypeId { get; set; }
         
         [Display(Name = "Date of birth")] // Trzeba zawsze rekompilowac kod po zmianie
+        [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
     }
 }
