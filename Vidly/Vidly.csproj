@@ -291,10 +291,22 @@
     <Compile Include="Migrations\201808101005065_ValidationCustomer.Designer.cs">
       <DependentUpon>201808101005065_ValidationCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808110916007_ChangeMovie.cs" />
+    <Compile Include="Migrations\201808110916007_ChangeMovie.Designer.cs">
+      <DependentUpon>201808110916007_ChangeMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808140843197_addMovieDataAnnotations.cs" />
+    <Compile Include="Migrations\201808140843197_addMovieDataAnnotations.Designer.cs">
+      <DependentUpon>201808140843197_addMovieDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808140909424_FixGenreAndMovie.cs" />
+    <Compile Include="Migrations\201808140909424_FixGenreAndMovie.Designer.cs">
+      <DependentUpon>201808140909424_FixGenreAndMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Genere.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -467,6 +479,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808101005065_ValidationCustomer.resx">
       <DependentUpon>201808101005065_ValidationCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808110916007_ChangeMovie.resx">
+      <DependentUpon>201808110916007_ChangeMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808140843197_addMovieDataAnnotations.resx">
+      <DependentUpon>201808140843197_addMovieDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808140909424_FixGenreAndMovie.resx">
+      <DependentUpon>201808140909424_FixGenreAndMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
