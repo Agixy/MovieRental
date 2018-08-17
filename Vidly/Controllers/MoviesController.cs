@@ -53,10 +53,6 @@ namespace Vidly.Controllers
         [ValidateAntiForgeryToken]
         public virtual ActionResult Save(Movie movie)
         {
-            var errors = ModelState
-                .Where(x => x.Value.Errors.Count > 0)
-                .Select(x => new { x.Key, x.Value.Errors })
-                .ToArray();
 
             if (!ModelState.IsValid)
             {
