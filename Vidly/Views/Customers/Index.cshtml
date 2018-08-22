@@ -17,6 +17,7 @@ else
         <tr>
             <th>Customer</th>
             <th>Membership Type</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -25,8 +26,19 @@ else
             <tr>
                 <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new {id = customer.Id}, null)</td>
                 <td>@customer.MembershipType.Name</td>
+                <td>
+                    <button class="btn-link js-delete">Delete</button>
+                </td>
             </tr>
         }
         </tbody>
     </table>
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+
+        })
+    </script>
 }
