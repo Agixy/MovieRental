@@ -68,9 +68,9 @@ namespace Vidly.Controllers
         // GET: Customers
         public virtual ViewResult Index()
         {
-            var customList = _context.Customers.Include(c => c.MembershipType).ToList();
+            //var customList = _context.Customers.Include(c => c.MembershipType).ToList();
           
-            return View(customList);
+            return View();
         }
 
         [Route("/{id}")]
