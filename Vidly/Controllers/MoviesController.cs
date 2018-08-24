@@ -19,11 +19,9 @@ namespace Vidly.Controllers
             _context = new ApplicationDbContext();
         }
 
-        public virtual ViewResult Index()
-        {
-            var moviesList = _context.Movies.Include(m => m.Genre).ToList();
-
-            return View(moviesList);
+        public ViewResult Index()
+        {         
+            return View();
         }
 
         [Route("/{id}")]
